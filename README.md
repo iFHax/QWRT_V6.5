@@ -6,5 +6,5 @@ rm -f /tmp/design-theme-backup.tar.gz
 /etc/init.d/uhttpd restart
 </code></pre>
 <center>
-  ![QWRT Theme](https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/ss.png)
+<img src="https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/ss.png" alt="QWRT Theme" width="600">
 </center>
