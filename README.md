@@ -1,9 +1,10 @@
 # QWRT Theme
 <pre><code>
-cd /tmp
-wget https://github.com/iFHax/QWRT-THEME/raw/refs/heads/main/design-theme-backup.tar.gz
-tar -xzvf design-theme-backup.tar.gz -C /
-rm -f /tmp/design-theme-backup.tar.gz
+ opkg update
+opkg install unrar
+wget https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/greentee.rar -O /tmp/greentee.rar
+unrar x /tmp/greentee.rar -d /www/luci-static/
+rm -f /tmp/greentee.rar
 /etc/init.d/uhttpd restart
 </code></pre>
 
