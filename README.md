@@ -1,10 +1,10 @@
-# QWRT Theme
+# QWRT Theme OpenWrt 21.02
 <pre><code>
 opkg update
 opkg install unrar
-wget https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/greentee.rar -O /tmp/greentee.rar
-unrar x /tmp/greentee.rar -d /www/luci-static/
-rm -f /tmp/greentee.rar
+wget https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design.rar -O /tmp/design.rar
+unrar x /tmp/design.rar -d /www/luci-static/
+rm -f /tmp/design.rar
 /etc/init.d/uhttpd restart
 </code></pre>
 
