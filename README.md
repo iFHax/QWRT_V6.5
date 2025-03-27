@@ -2,6 +2,7 @@
 
 ## DESIGN
 <pre><code>
+sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
 rm -r /www/luci-static/design
 opkg update
 opkg install unrar
