@@ -2,12 +2,11 @@
 
 ## DESIGN-ORIGIN
 <pre><code>
-  sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
-  rm /www/luci-static/design/css/style.css
-  wget https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
-  cp /tmp/design-orygin-style.css.bak /www/luci-static/design/css/style.css
-  rm /tmp/design-orygin-style.css.bak
-  /etc/init.d/uhttpd restart
+sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
+rm -f /www/luci-static/design/css/style.css
+wget -q --show-progress https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
+mv /tmp/design-orygin-style.css.bak /www/luci-static/design/css/style.css
+/etc/init.d/uhttpd restart
 </code></pre>
 
 ## DESIGN
