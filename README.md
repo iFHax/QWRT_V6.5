@@ -1,10 +1,15 @@
 # QWRT Theme OpenWrt 21.02 for QWRT BY Abi Darwish Arcadyan Telstra AW1000 5G Modem 
+## FAVICON
+<pre><code>
+rm -f /www/luci-static/design/images/apple-touch-icon.png
+wget -q -O /www/luci-static/design/images/apple-touch-icon.png https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/cat.png
+</code></pre>
 
 ## DESIGN-ORIGIN
 <pre><code>
 sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
 rm -f /www/luci-static/design/css/style.css
-wget -q --show-progress https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
+wget -q -O https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
 mv /tmp/design-orygin-style.css.bak /www/luci-static/design/css/style.css
 /etc/init.d/uhttpd restart
 </code></pre>
