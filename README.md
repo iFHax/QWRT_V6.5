@@ -2,6 +2,7 @@
 
 ## DESIGN
 <pre><code>
+rm -r /www/luci-static/design
 opkg update
 opkg install unrar
 wget https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design.rar -O /tmp/design.rar
@@ -12,6 +13,7 @@ rm -f /tmp/design.rar
 
  ## DESIGN-G
 <pre><code>
+rm -r /www/luci-static/design
 opkg update
 opkg install unrar
 wget https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design-g.rar -O /tmp/design-g.rar
