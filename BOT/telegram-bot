@@ -1,0 +1,19 @@
+#!/bin/sh /etc/rc.common
+# OpenWRT init.d script for Telegram Bot
+
+START=99
+STOP=10
+USE_PROCD=1
+
+start_service() {
+    procd_open_instance
+    procd_set_param command python3 /root/telegram-bot/telegram_bot.py
+    procd_set_param respawn
+    procd_close_instance
+}
+
+stop_service() {
+    pkill -f "python3 /root/telegram-bot/telegram_bot.py"
+}
+
+
