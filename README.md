@@ -1,4 +1,4 @@
-# QWRT Theme OpenWrt 21.02 for QWRT BY Abi Darwish Arcadyan Telstra AW1000 5G Modem 
+# FIX QWRT V6.5
 
 ## AUTO SET
 <pre><code>
