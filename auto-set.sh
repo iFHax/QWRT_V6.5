@@ -27,9 +27,9 @@ install_modv2_design() {
     rm -r /www/luci-static/design
     opkg update
     opkg install unrar
-    wget -O /tmp/luci-static-design.tar.gz https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/luci-static-design.tar.gz
-    unrar x /tmp/luci-static-design.tar.gz -d /www/luci-static/
-    rm -f /tmp/luci-static-design.tar.gz
+    wget -O /tmp/design.rar https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/design.rar
+    unrar x /tmp/design.rar -d /www/luci-static/
+    rm -f /tmp/design.rar
     /etc/init.d/uhttpd restart
     echo "ModV2 Design successfully installed!"
 }
