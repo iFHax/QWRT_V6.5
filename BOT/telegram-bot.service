@@ -1,0 +1,12 @@
+[Unit]
+Description=Telegram Bot for OpenClash
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/telegram-bot/telegram_bot.py
+WorkingDirectory=/opt/telegram-bot
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
