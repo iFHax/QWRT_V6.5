@@ -58,7 +58,7 @@ while true; do
     read -p "Select an option (1-5): " choice
 
     case $choice in
-        1) clear ; hange_favicon ;;
+        1) clear ; change_favicon ;;
         2) clear ; fix_original_theme_icon ;;
         3) clear ; install_modv2_design ;;
         4) clear ; setup_autostart_openclash ;;
