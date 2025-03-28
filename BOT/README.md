@@ -18,5 +18,7 @@ After updating, restart the bot with:
 ## open telegram bot AND just type /start
 
 /etc/init.d/telegram-bot enable  - enable bot
+
 /etc/init.d/telegram-bot stop - stop bot
+
 /etc/init.d/telegram-bot restart - restart bot
