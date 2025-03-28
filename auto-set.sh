@@ -7,6 +7,14 @@ change_favicon() {
     echo "Favicon successfully changed!"
 }
 
+fix_original_theme_icon() {
+     sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
+     rm -f /www/luci-static/design/css/style.css
+     wget -q -O https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
+     mv /tmp/design-orygin-style.css.bak /www/luci-static/design/css/style.css
+     /etc/init.d/uhttpd restart
+ }
+ 
 translet_modem_add_icon() {
     echo "Translating 'Mobile Data' to 'Modem' in the interface..."
     sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
@@ -44,18 +52,19 @@ while true; do
     echo "2. FIX ICON ONLY"
     echo "3. SET DESIGN V2"
     echo "4. AUTO START OPENCLASH"
+    echo "5. FIX MODEM LANGUEGE"
     echo "5. EXIT"
     echo "============================"
     read -p "Select an option (1-5): " choice
 
     case $choice in
-        1) clear ; change_favicon ;;
-        2) clear ; cfix_original_theme_icon ;;
-        3) clear ; cinstall_modv2_design ;;
-        4) clear ; csetup_autostart_openclash ;;
-        5) clear ; cecho "Exiting..."; exit 0 ;;
-        6) clear ; translet_modem_add_icon ;;
-        *) clear ; cecho "Invalid choice, please try again." ;;
+        1) clear ; hange_favicon ;;
+        2) clear ; fix_original_theme_icon ;;
+        3) clear ; install_modv2_design ;;
+        4) clear ; setup_autostart_openclash ;;
+        5) clear ; translet_modem_add_icon ;;
+        6) clear ; echo "Exiting..."; exit 0 ;;
+        *) clear ; echo "Invalid choice, please try again." ;;
     esac
     read -p "Press Enter to continue..."
 done
