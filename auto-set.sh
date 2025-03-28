@@ -3,14 +3,14 @@
 change_favicon() {
     echo "Changing favicon..."
     rm -f /www/luci-static/design/images/apple-touch-icon.png
-    wget -q -O /www/luci-static/design/images/apple-touch-icon.png https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/cat.png
+    wget -q -O /www/luci-static/design/images/apple-touch-icon.png https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/cat.png
     echo "Favicon successfully changed!"
 }
 
 fix_original_theme_icon() {
      sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
      rm -f /www/luci-static/design/css/style.css
-     wget -q -O https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
+     wget -q -O https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
      mv /tmp/design-orygin-style.css.bak /www/luci-static/design/css/style.css
      /etc/init.d/uhttpd restart
  }
@@ -27,7 +27,7 @@ install_modv2_design() {
     rm -r /www/luci-static/design
     opkg update
     opkg install unrar
-    wget -O /tmp/luci-static-design.tar.gz https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/luci-static-design.tar.gz
+    wget -O /tmp/luci-static-design.tar.gz https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/luci-static-design.tar.gz
     unrar x /tmp/luci-static-design.tar.gz -d /www/luci-static/
     rm -f /tmp/luci-static-design.tar.gz
     /etc/init.d/uhttpd restart
@@ -37,7 +37,7 @@ install_modv2_design() {
 setup_autostart_openclash() {
     echo "Setting up OpenClash autostart..."
     echo -e "echo \"\$(date '+%Y-%m-%d %H:%M:%S') - Checked\" >> /root/rc_test.log\n/etc/openclash_autostart.sh &" >> /etc/rc.local
-    wget -O /etc/openclash_autostart.sh https://raw.githubusercontent.com/iFHax/QWRT-THEME/main/OpenClash/openclash_autostart.sh
+    wget -O /etc/openclash_autostart.sh https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/OpenClash/openclash_autostart.sh
     chmod +x /etc/openclash_autostart.sh
     echo "OpenClash autostart setup complete!"
 }
