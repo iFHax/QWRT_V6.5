@@ -7,7 +7,6 @@ Replace the following with your actual details:
 - `ALLOWED_USERS = [TELEGRAM_ADMIN]` → Your Telegram admin user ID  
 
 After updating, restart the bot with:  
-```sh 
 /etc/init.d/telegram-bot restart  
 
 <pre>
