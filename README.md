@@ -1,4 +1,4 @@
-# FIX QWRT V6.5
+# Theme / ICON and Translator - QWRT V6.5
 
 ## AUTO SET
 <pre><code>
