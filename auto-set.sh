@@ -53,7 +53,7 @@ while true; do
     echo "3. SET DESIGN V2"
     echo "4. AUTO START OPENCLASH"
     echo "5. FIX MODEM LANGUEGE"
-    echo "5. EXIT"
+    echo "6. EXIT"
     echo "============================"
     read -p "Select an option (1-5): " choice
 
