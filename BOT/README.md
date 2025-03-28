@@ -1,5 +1,5 @@
 # ONLY A DEMO
-
+# This is just a basic script demo. Feel free to add more features as needed.
 UPDATE:  
 Replace the following with your actual details:  
 
@@ -15,7 +15,7 @@ After updating, restart the bot with:
   </code>
 </pre>
 
-## open telegram bot AND just type /start
+## Open telegram bot AND just type /start
 
 /etc/init.d/telegram-bot enable  - enable bot
 
