@@ -7,11 +7,11 @@ change_favicon() {
     echo "Favicon successfully changed!"
 }
 
-fix_original_theme_icon() {
-    echo "Fixing icons in the original design theme..."
+translet_modem_add_icon() {
+    echo "Translating 'Mobile Data' to 'Modem' in the interface..."
     sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
     /etc/init.d/uhttpd restart
-    echo "Icons successfully fixed!"
+    echo "Translation applied successfully!"
 }
 
 install_modv2_design() {
@@ -54,6 +54,7 @@ while true; do
         3) clear ; cinstall_modv2_design ;;
         4) clear ; csetup_autostart_openclash ;;
         5) clear ; cecho "Exiting..."; exit 0 ;;
+        6) clear ; translet_modem_add_icon ;;
         *) clear ; cecho "Invalid choice, please try again." ;;
     esac
     read -p "Press Enter to continue..."
