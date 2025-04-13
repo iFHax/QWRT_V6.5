@@ -30,6 +30,8 @@ install_modv2_design() {
     wget -O /tmp/design.rar https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/design.rar
     unrar x /tmp/design.rar -d /www/luci-static/
     rm -f /tmp/design.rar
+    rm /www/luci-static/design/css/style.css
+    wget -q -O /www/luci-static/design/css/style.css https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/style.css
     /etc/init.d/uhttpd restart
     echo "ModV2 Design successfully installed!"
 }
