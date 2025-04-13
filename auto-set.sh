@@ -10,8 +10,7 @@ change_favicon() {
 fix_original_theme_icon() {
      sed -i 's/移动数据/Modem/g' /usr/lib/lua/luci/controller/quectel.lua
      rm -f /www/luci-static/design/css/style.css
-     wget -q -O https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/design-orygin-style.css.bak -O /tmp/design-orygin-style.css.bak
-     mv /tmp/design-orygin-style.css.bak /www/luci-static/design/css/style.css
+     wget -q -O /www/luci-static/design/css/style.css https://raw.githubusercontent.com/iFHax/QWRT_V6.5/main/design-orygin-style.css.bak
      /etc/init.d/uhttpd restart
  }
  
